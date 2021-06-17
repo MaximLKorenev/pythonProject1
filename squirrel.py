@@ -4,6 +4,3 @@ def squirrel(n):
         factorial *= n
         n -= 1
     return int(str(factorial)[0])
-
-
-print(squirrel(1000))
