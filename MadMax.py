@@ -1,4 +1,5 @@
 def MadMax(N, Tele):
+    Tele.sort()
     if N == 1:
         return Tele
     if N <= 5:
