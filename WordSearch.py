@@ -19,4 +19,4 @@ def WordSearch(len_ns, s, subs):
                 break
         else:
             my_list.append(0)
-    return my_list, list_n
+    return my_list
