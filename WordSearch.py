@@ -5,7 +5,7 @@ def WordSearch(len_ns, s, subs):
         S = list_s.pop(0)
         if len(S) < len_ns - 1:
             if len(list_s) > 1:
-                while len(S + ' ' + list_s[0]) < len_ns:
+                while len(S + ' ' + list_s[0]) <= len_ns:
                     S += ' ' + list_s.pop(0)
         elif len(S) > len_ns:
             list_s.insert(0, S[len_ns:])
@@ -19,4 +19,4 @@ def WordSearch(len_ns, s, subs):
                 break
         else:
             my_list.append(0)
-    return my_list
+    return my_list, list_n
