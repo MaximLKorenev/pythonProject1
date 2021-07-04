@@ -8,12 +8,12 @@ def Unmanned(L, N, track):
         start = track[i][0]
         rs = 0
         re = gs = track[i][1]
-        ge = gs + track[i][2]
+        cycle = ge = gs + track[i][2]
         while ge < time:
-            rs += ge
-            re += ge
-            gs += ge
-            ge += ge
+            rs += cycle
+            re += cycle
+            gs += cycle
+            ge += cycle
         if time < re:
             time = re
     time += L - start
