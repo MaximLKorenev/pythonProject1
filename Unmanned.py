@@ -2,6 +2,8 @@ def Unmanned(L, N, track):
     start = 0
     time = 0
     for i in range(N):
+        if L <= track[i][0]:
+            break
         time += track[i][0] - start
         start = track[i][0]
         rs = 0
