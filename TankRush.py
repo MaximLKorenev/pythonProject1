@@ -13,23 +13,18 @@ def TankRush(h1, w1, s1, h2, w2, s2):
         for j in range(w2):
             b.append(l2[i][j])
         m2.append(b)
-    find = 0
-    for i in range(h2):
-        if find < i:
-            return False
-        for j in range(h1):
-            if find > i:
-                break
-            for k in range(w1 - w2 + 1):
-                if find > i:
-                    break
-                for m in range(w2):
-                    if m2[i][m] != m1[j][k + m]:
+    for i in range(h1 - h2 + 1):
+        for j in range(w1 - w2 + 1):
+            if m1[i][j] == m2[0][0]:
+                flag = True
+                for k in range(h2):
+                    if not flag:
                         break
-                    elif m2[i][m] == m1[j][k + m] and m == w2 - 1:
-                        find += 1
-                        break
-    if find == h2:
-        return True
-    else:
-        return False
+                    for m in range(w2):
+                        if m1[i + k][j + m] != m2[k][m]:
+                            flag = False
+                            break
+                        elif (m1[i + k][j + m] == m2[k][m]
+                              and k == h2 - 1 and m == w2 - 1):
+                            return True
+    return False
