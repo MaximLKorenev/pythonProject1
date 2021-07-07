@@ -1,5 +1,5 @@
 def MaximumDiscount(n, price):
-    price.sort()
+    price.sort(reverse=True)
     discount = 0
     if len(price) > 2:
         for i in range(2, n, 3):
