@@ -27,6 +27,6 @@ def ShopOLAP(n, items):
 
     new_list = []
     for i in range(0, len(lwr), 2):
-        a = '{0} {1}'.format(lwr[i], str(lwr[i + 1]))
+        a = '{0} {1}'.format(lwr[i], lwr[i + 1])
         new_list.append(a)
     return new_list
