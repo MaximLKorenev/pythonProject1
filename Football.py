@@ -1,10 +1,10 @@
 def Football(f, n):
     if n == 1:
-        return True
+        return False
     sort_f = f[:]
     sort_f.sort()
     if f == sort_f:
-        return True
+        return False
     a = 0
     b = n - 1
     while a < n - 1:
